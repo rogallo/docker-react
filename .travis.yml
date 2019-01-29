@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t robgaal/docker-react Dockerfile.dev .
+  - docker build -t robgaal/docker-react -f Dockerfile.dev .
 
 script:
   docker run robgaal/docker-react npm run test -- --coverage
